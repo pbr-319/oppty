@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive Web Projects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f2f2f2;
+      }
+      header {
+        background: #ffffff;
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+      }
+      nav a {
+        margin: 0 10px;
+        color: #1176e1;
+        font-weight: bold;
+      }
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        background: #ffffff;
+        padding: 20px;
+      }
+      h2 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .box {
+        flex: 1;
+        min-width: 300px;
+      }
+      button {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 6px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      .note {
+        background: #dee15f;
+        padding: 10px;
+        border: 1px solid #ffeeba;
+        margin-top: 10px;
+      }
+      iframe {
+        width: 100%;
+        height: 250px;
+        border: 0;
+      }
+      footer {
+        text-align: center;
+        background: #ffffff;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+        font-size: 14px;
+      }
+      .error {
+        color: red;
+        font-size: 13px;
+      }
+      .success {
+        color: green;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Interactive Web Project</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Dynamic</a>
+        <a href="#">Timer</a>
+        <a href="#">Contact Form</a>
+      </nav>
+    </header>
+    <div class="container">
+      <h2>About This Project</h2>
+      <div class="flex">
+        <div class="box">
+          <p>This is a sample Interactive web page bulid using HTML and CSS</p>
+          <strong>Features Demonstrated:</strong>
+          <ul>
+            <li>Page layout</li>
+            <li>Forms</li>
+            <li>Lists</li>
+            <li>Embedded Map</li>
+          </ul>
+        </div>
+        <div class="box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7727.409279243287!2d78.65885995351921!3d14.444177666865444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb37596117d67c5%3A0x42a00384a99dcb4d!2skothagiriyapalli!5e0!3m2!1sen!2sin!4v1767335040290!5m2!1sen!2sin"
+          ></iframe>
+          <br /><br />
+          <button>Toggle Map</button>
+        </div>
+      </div>
+      <hr />
+      <div class="flex">
+        <div class="box">
+          <h2>Interactive To-Do List</h2>
+          <input type="text" placeholder="New Task" />
+          <button>Add</button>
+          <ul>
+            <li>Learn HTML<button>Remove</button></li>
+            <li>Practice Javascript<button>Remove</button></li>
+            <li>Store data in localstorage<button>Remove</button></li>
+          </ul>
+          <div class="note">
+            Task are saved in your browser's local storage.
+          </div>
+          <br />
+          <button>Clear All Tasks</button>
+          <div class="box">
+            <h2>Auto-Updating Timer</h2>
+            <p>This conter auto-updates every second:</p>
+            <h3>Time elapsed:00:00:08</h3>
+            <button>Pause Timer</button>
+            <button>Reset Timer</button>
+          </div>
+        </div>
+        <div class="box">
+          <h2>Auto-Updating Timer</h2>
+          <p>This conter auto-updates every second:</p>
+          <h3>Time elapsed:00:00:08</h3>
+          <button>Pause Timer</button>
+          <button>Reset Timer</button>
+        </div>
+      </div>
+      <hr />
+      <h2>Feast Hesions & Videos</h2>
+      <div class="box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7727.409279243287!2d78.65885995351921!3d14.444177666865444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb37596117d67c5%3A0x42a00384a99dcb4d!2skothagiriyapalli!5e0!3m2!1sen!2sin!4v1767335040290!5m2!1sen!2sin" style="width: 50%; height:300px;"></iframe>
+        <br /><br />
+        <button>Toggle Map</button>
+      </div>
+      <h2>Contact Form</h2>
+      <forms>
+        <label>Name:</label>
+        <input type="text" />
+        <div class="error">Please enter your name</div>
+        <label>Email:</label>
+        <input type="email" />
+        <div class="error">Please enter your Email address</div>
+        <label>Password:</label>
+        <input type="password" />
+        <div class="error">Password at least 6 characters long</div>
+        <label>Message:</label>
+        <textarea rows="5" cols="8"></textarea>
+        <br /><br/>
+        Subscribe to newletter?
+        <input type="checkbox"/>Yes <input type="checkbox"/>No <br /><br />
+        Preferred contact:
+        <input type="checkbox"/>Email <input type="checkbox"/>Phone
+        <br /><br/>
+        <button>Submit</button>
+        <button type="reset">Clear Data</button>
+        <div class="success">
+          <br/>
+          Your information is saved in this browser
+        </div>
+      </forms>
+    </div>
+    <footer>
+      © 2024 Interactive Web Project | Your email: <a href="#">poreddybhargavareddy319@gmail</a> <br />
+      <a href="#">Privacy policy</a>|
+      <a href="#">Terms of Service</a>
+    </footer>
+  </body>
+</html>
