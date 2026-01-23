@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #59e2a2f7, #f282cf);
+    color: #0d0202;
+    text-align: center;
+}
+h1 {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.section {
+    padding: 40px 20px;
+}
+.section h2 {
+    margin-bottom: 30px;
+}
+.card {
+    background: rgba(215, 207, 207, 0.721);
+    border-radius: 12px;
+    padding: 15px;
+    width: 230px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.cards {
+    background: rgba(241, 115, 11, 0.941);
+    border-radius: 12px;
+    padding: 15px;
+    width: 230px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.cards img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card h3,.cards h3{
+    margin: 10px 0 5px;
+}
+.card p,.cards p {
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+}
+.cards:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(6, 8, 4, 0.692);
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(227, 13, 13, 0.814);
+}
+.hobbit-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.lotr-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
+    max-width: 600px;
+    margin: auto;
+}
