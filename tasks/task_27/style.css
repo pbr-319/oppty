@@ -1,0 +1,168 @@
+:root{
+    --bg-dark: #050505;
+    --orange:#ff8a1f;
+    --blue:#4da3ff;
+    --white:#ffffff;
+    --gray:#b5b5b5;
+    --radius:30px;
+    --transition:0.4s ease;
+    --font-main: 'Segoe UI', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+body{
+    background: radial-gradient(circle at top left,#2a1400,#000),radial-gradient(circle at top right,#00132a,#000);
+    color:var(--white);
+    min-height: 100vh;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+}
+.logo span{
+    color:var(--orange);
+}
+.navbar nav a{
+    margin: 0 15px;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+.navbar nav a:hover{
+    color: var(--blue);
+}
+.btn-primary{
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn-primary:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--orange);
+}
+.btn-outline{
+    background: transparent;
+    border: 1px solid var(--gray);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius:  var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    animation: swing 0.8s ease;
+}
+.btn-outline:hover{
+    border-color: var(--blue);
+    box-shadow: 0 0 15px var(--blue);
+}
+.hero{
+    text-align: center;
+    padding: 100px 20px;
+}
+.title{
+    font-size: 130px;
+    line-height: 1.1;
+    animation: bounceInDown 1.2s ease;
+}
+.title span {
+    background: linear-gradient(90deg,var(--orange),var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.subtitle{
+    max-width: 700px;
+    margin: 25px auto;
+    color: var(--gray);
+    font-size: 18px;
+    animation: flip 1s ease;
+}
+.hero-buttons{
+    margin-top: 40px;
+}
+.hero-buttons button{
+    margin: 10px;
+}
+.status-card{
+    margin-left:60px;
+    width:280px;
+    padding:25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#2a1400,#00132a);
+    box-shadow: 0 0 30px rgba(255,138,31,0.3);
+    transition: var(--transition);
+    animation: swing 0.8s ease;
+}
+.status-card:hover{
+    transform: translateY(-10px);
+}
+.small{
+    font-size: 12px;
+    color: var(--gray);
+}
+@keyframes bounceINDown{
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes flip{
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+@keyframes swing{
+    20% {transform: rotate(10deg);}
+    40% {transform: rotate(-10deg);}
+    60% {transform: rotate(5deg);}
+    80% {transform: rotate(-5deg);}
+    100% {transform: rotate(0);}
+}
+@media(max-width: 1024px){
+    .title{
+        font-size: 60px;
+    }
+}
+@media(max-width:768px){
+    .navbar{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 48px;
+    }
+    .subtitle{
+        font-size: 16px;
+    }
+}
+@media(max-width:480px){
+    .title{
+        font-size: 38px;
+    }
+    .btn-primary,.btn-outline{
+        width: 100%;
+    }
+}
