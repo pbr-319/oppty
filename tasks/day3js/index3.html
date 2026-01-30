@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <h3>Even Numbers 1 to 20 using  For loop</h3>
+    <h3>Odd Numbers 1 to 20 using While loop</h3>
+    <h3> Numbers 1 to 20 using While loop</h3>
+    <h3>for...of,for...in and for...each</h3>
+
+    <script>
+
+        //Even numbers 
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 ===0) {
+                console.log(i);
+            }
+        }
+        
+        // Odd numbers 
+        let i = 1;
+        while (i <= 20) {
+            if (i % 2  !== 0){
+                console.log(i);
+            }
+            i++;
+        }
+
+        // number do while
+        let j = 1;
+        do {
+            console.log(j);
+            j++;
+        }
+        while (j <= 20);
+
+        // For ... of
+        let a = [111,222,333,444,555];
+        for (let item of a) {
+            console.log(item);
+        }
+
+        // for ... in
+        let student = { Aame: "Bhargava", Age:27,Game:"Pubg", Role:"Bot" };
+
+        for (let key in student) {
+            console.log(key + " : " + student[key]);
+        }
+
+        // for ...each
+        let numbers = [30, 40, 50];
+        numbers.forEach(function(num) {
+             console.log(num);
+        });
+        
+    </script>
+    
+</body>
+</html>
