@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <h3>Java script Array Methods examples</h3>
+    <script>
+        //1.Array length
+        console.log("-----Array length-----");
+
+        let  a = ["BGMI", "PUBG", "Bot"];
+        console.log(a.length);
+
+        // 2.Array tostring() method
+       console.log("-------Array tostring() method----");
+       
+
+        let b =  ["Fire", "Strom", "Water"];
+        let s = a.toString();
+        console.log(s);
+
+        // 3.Array join() method
+        console.log("----Array join() method-----");
+
+
+        let c = ["PRO", "Ultra pro", "Average"];
+        console.log(c.join('||'));
+
+        // 4.Array delete operator
+        console.log("----Array delete operator---");
+
+        
+        let d =  {Name: "Bhargava", Last: "Reddy", Role: "web developer"}
+        console.log(delete d.Last);
+        console.log(d);
+
+        // 5.Array concat() method
+        console.log("----Array concat() method----");
+
+
+        let a1 = [1, 2, 3];
+        let a2 = [4, 5, 6];
+        let a3 = [7, 8, 9];
+        let newArr = a1.concat(a2, a3);
+        console.log(newArr);
+
+        // 6.Array flat() method
+        console.log("----Array flat() method-----");
+
+
+        let b1 = [['10', '20'],['30' ,'40', '50',['60'], '70']];
+        const b2 = b1.flat(Infinity);
+        console.log(b1);
+
+        // 7.Array push() method
+        console.log("----Array push() method-----");
+
+
+        let x = ["cow", "dog", "cat"];
+        x.push("Donkey");
+        console.log(x);
+
+        // 8.Array unshift() method
+        console.log("----Array unshift() method----");
+
+
+        let y = ["cow", "dog", "cat"];
+        y.unshift("hen", "crow");
+        console.log(y);
+
+        // 9.Array pop() method
+        console.log("----Array pop() method----");
+
+
+        let z =  ["cow", "dog", "cat", "pet"];
+        z.pop();
+        console.log(z);
+
+        // 10.Array shift() method
+        console.log("----Array shift() method----");
+
+
+        let x1 =  ["cow", "dog", "cat"];
+        x1.shift();
+        console.log(x1);
+
+        // 11.Array splice() method
+        console.log("----Array splice() method----");
+
+
+        let y1 =  ["cow", "dog", "cat"];
+        y1.splice(4, 2);
+        y1.splice(1, 2, "woc", "god", "tac");
+        console.log(y1);
+
+        // 12.Array slice() method
+        console.log("----Array slice() method----");
+
+
+        const z1= [100, 200, 300, 400 ];
+        const result = z1.slice(1,4);
+        console.log(result);
+
+        // 13.Array some() method 
+        console.log("----Array some() method----")
+        const e = [22 ,33 ,44 ,55 ];
+        let res = e.some((val) => val > 35);
+        console.log(res);
+        
+        // 14.Array map() method
+        console.log("----Array map() method----");
+
+
+        const users = [
+            {No: 1, Name: 'wine' ,Brand: 'solid'},
+            {No: 2, Name: 'beer' ,Brand: 'liquid'},
+            {No: 3, Name: 'bider' ,Brand: 'label'}
+        ];
+        const r = users.map(user => user.Brand);
+        console.log(r);
+
+        // 15.Array filter() method
+        console.log("----Array filter() method----");
+
+
+        let r1 = [888,999,777,666];
+        let r2 = r1.filter((num) => num > 900);
+        console.log(r2);
+
+        // 16.Array reduce() method
+        console.log("----Array reduce() method----");
+
+        let f = [980,690,200,5];
+        let sub = f.reduce(geeks);
+        function geeks(sub, result) {
+            return sub - result;
+        }
+        console.log(sub);
+
+        // 17.Array  reverse() method
+        console.log("----Array  reverse() method----");
+
+
+        let g = ["ant" ,"ball" ,"card" ,"duck"];
+        g.reverse();
+        console.log(g);
+
+        // 18.Array  values() method
+        console.log("----Array  values() method----");
+
+
+        const h = ["RED" , "Blue" ,"BLack" ,"Green"];
+        const Res = h.values();
+        for (const value of Res) {
+            console.log(value);
+        }
+    </script>
+    
+</body>
+</html>
