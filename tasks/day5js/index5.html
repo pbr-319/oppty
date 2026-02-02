@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+        // -----------Template Literals (String Interpolation)----------
+        console.log("-----------Template Literals (String Interpolation)----------");
+
+        let a1 = 'Hercules';
+        let a2= `You are learning from ${a1}`;
+        console.log(a2);
+
+        //-----variable---------
+        console.log("                  -----variable---------");
+
+        let age = 25;
+        let name = "john";
+        let result = 'Thunder ${name}';
+        let expression = `I am ${age+2} years old`;
+        console.log(expression);
+
+
+        // -----------Empty String:-------------
+        console.log("-            ----------Empty String:-------------");
+
+        let b1 = '';
+        let b2 = "";
+        console.log(b1);
+        console.log(b2);
+
+        //    ----------Multiline Strings:-------
+        console.log("             ----------Multiline Strings:-------");
+
+        let x = `
+        thutunder in the 
+         sky and fire in heart
+         dashing danger in the strength`;
+        console.log(x);
+
+        //------------1.Basic Operations on JavaScript Strings----------
+        console.log("1.Stringlength----------");
+
+        let y = 'Ragnorockstrorm';
+        let len = y.length;
+        console.log("String Length: " + len);
+
+        // -------------2.String Concatenation: + operator------------
+        console.log("2.String Concatenation: + operator-----");
+
+        let c1 = 'EAST OR WEST';
+        let c2 = '  GROOT IS BEST';
+        let res = c1 + c2;
+        console.log("Concat String: " + res);
+
+        //  -------------------3. Escape Characters------------------
+        console.log("3. Escape Characters------------------");
+
+        const d1 = "\'ABCDEFGHIJ\' is a learning portal";
+        const d2 = "\"walton\" is a learning portal";
+        const d3 = "\\walton\\ is a learning portal";
+        console.log(d1);
+        console.log(d2);
+        console.log(d3);
+
+        //  4. Breaking Long String:-------------------
+        console.log("4. Breaking Long String:------");
+
+        const g = "JavaScript is powerful language\nused for Web development";
+        console.log(g);
+
+        // -------------5. substring() method-----------
+        console.log("5. substring() method-----------");
+
+        let z1 = 'Ligthing fire in the dark hole in den';
+        let z2 = z1.substring(0, 13);
+        console.log(z2);
+
+
+        // -------6. toUpperCase() and toLowerCase() methods-----------
+        console.log("6. toUpperCase() and toLowerCase() methods");
+
+        let s = 'hollywoodman';
+        let upperCase = s.toUpperCase();
+        let lowerCase = s.toLowerCase();
+        console.log(upperCase);
+        console.log(lowerCase);
+
+        // ------------ 7.(index() method) Find the first index of a substring within a string using indexOf() method.------
+        console.log("7. string using indexOf() method.------");
+
+        let k1 = 'aaaa bbbb cccc sum';
+        let i = k1.indexOf('sum');
+        console.log(i);
+
+        // -------8. String Replace in JavaScript:replace() method-------
+        console.log("8.replace() method-------");
+
+        let r1 = 'Tubo speede is greater than in the lighterning mcqueen in the london';
+        let r2 = r1.replace(/Tubo/g, 'ferrai');
+        let r3 = r1.replace(/mcqueen/g, 'pain');
+        console.log(r2);
+        console.log(r3);
+
+        // -------9. Trimming Whitespace from String:trim() method.-------
+        console.log("9.trim() method.-------");
+
+        let u1 = '         speed ion neeed the speed stop';
+        let u2 = u1.trim();
+        console.log(u2);
+
+        // ------------10. Access Characters from String: charAt() method------
+        console.log("10.  charAt() method------");
+
+        let h1 = 'JavaScript';
+        let h2 = h1[6];
+        console.log(h2);
+        h2 = h1.charAt(5);
+        console.log(h2);
+
+        // -----------11. String Comparison in JavaScript: localeCompare()-----
+        console.log("11. String Comparison : localeCompare()-----");
+
+        let s1 = "Bhargavareddy";
+        let s2 = new String("Bhargavareddy");
+        console.log(s1 == s2);
+        console.log(s1 === s2);
+        console.log(s1.localeCompare(s2));
+
+        // ------12. Passing JavaScript String as Objects----
+        console.log("12. Passing JavaScript String as Objects----------");
+
+        const str = new String("FIRESTROM");
+        console.log(str);
+
+        // -------13.slice()---------
+        console.log("13.slice()---------");
+
+        let A = 'Devil from the Thunder';
+        let b = A.slice(0, 5);
+        let c = A.slice(6, 10);
+        let d = A.slice(15);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        //----------14.Substring()--------
+        console.log("14.Substring()--------");
+
+        let st = "mind, Power, Soul";
+        let part = st.substring(6,11);
+        console.log(part);
+
+        // --------15.Replace()------
+        console.log("15.Replace()------");
+
+         let s4 = "mind, Power, Soul";
+        let part1 = s4.replace("soul","mindpowersoul");
+        console.log(part1);
+
+        // --------16.RepaceAll()----------
+        console.log("16.RepaceAll()----------");
+
+        let text = "I was super hero in the world and I was not in the world  ";
+        let re = text.replaceAll("was","am");
+        console.log(text);
+        console.log(re);
+
+        // --------17.toUpperCase()----------
+        console.log("17.toUpperCase()----------");
+
+        let a5 = 'abcdefghijk';
+        let a6 = 'a-b-c-d-e-f-g-h-i-j-k';
+        console.log(a6.toUpperCase());
+
+        // --------18.toLowerCase()
+        console.log("18.toLowerCase()----------------");
+
+        let a7 = 'ABCDEFGIJK';
+        let a8 = 'A-B-C-D-E-F-G-I-J-K';
+        console.log(a8.toLowerCase());
+
+        // --------19.CONCAT()----------------
+        console.log("19.Concat()--------------");
+
+        let a9 = "Bhargava";
+        let rem = a9.concat("Reddy",  "is", " good");
+        console.log(rem);
+
+        // -------20.trim()--------------
+        console.log("20.trim()--------------");
+
+        let userInput = "    Bhargavaredy@gail.com     ";
+        let email = userInput.trim();
+        console.log(email);
+
+        //---------21.trimStart()------------
+        console.log("21.trimStart()------------");
+
+        let t = "      DEVIL";
+        let t1 = t.trimStart();
+        console.log(t1);
+
+        // ----------22.trimEnd()-----------
+        console.log("22.trimEnd()-----------");
+
+        let t2 = "ANGEL              ";
+        let t3 = t2.trimStart();
+        console.log(t3);
+
+        // ---------23.padStart()---------
+        console.log("23.padStart()---------");
+
+        let stone = "Redt";
+        stone = stone.padStart(10, "colour");
+        console.log(stone);
+
+        // ----------24.padEnd()--------
+        console.log("24.padEnd()--------");
+        let ston = "DOMA";
+        ston = ston.padEnd(9, "power");
+        console.log(ston);
+
+        // -----------25.charAt()----------
+        console.log("25.charAt()----------");
+
+        let Text = "HOBBIT";
+        let fl = Text.charAt(0);
+        let sl = Text.charAt(1);
+        let tl = Text.charAt(2);
+        console.log(fl);
+        console.log(sl);
+        console.log(tl);
+        
+        // ---------26.charCodeAt()----------
+        console.log("26.charCodeAt()----------");
+
+        let word = "LORD OF RINGS";
+        for (let i = 0;i < word.length; i++) {
+            console.log(word[i] + ": " + word.charCodeAt(i));
+        }
+
+        // ---------27.split()----------
+        console.log("27.split()----------");
+        let ab = "THE//RING//OF//POWER";
+        let bc = ab.split("//", 3);
+        console.log(bc);
+            </script>
+    
+</body>
+</html>
