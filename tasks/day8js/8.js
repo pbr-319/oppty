@@ -1,58 +1,57 @@
-function check() {
+function validateForm() {
+  validateEmail();
+  validatePassword();
+}
 
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+// -------------------------Email Validation-------------------------
+function validateEmail() {
+  const email = document.getElementById("email").value;
+  const emailResult = document.getElementById("emailResult");
+  let errors = [];
 
-    let emailResult = document.getElementById("emailResult");
-    let passwordResult = document.getElementById("passwordResult");
+  switch (true) {
+    case !/[A-Z]/.test(email):
+      errors.push("❌ Email must contain at least one uppercase letter");
+    case !/[a-z]/.test(email):
+      errors.push("❌ Email must contain at least one lowercase letter");
+    case !email.includes("@"):
+      errors.push("❌ Email must contain '@'");
+    case !email.endsWith(".com"):
+      errors.push("❌ Email must end with '.com'");
+  }
 
-    emailResult.innerHTML = "";
-    passwordResult.innerHTML = "";
+  if (errors.length > 0) {
+    alert(errors.join("\n"));
+    emailResult.innerHTML = errors.join("<br>");
+    emailResult.className = "error";
+  } else {
+    emailResult.innerHTML = "✅ Valid email address!";
+    emailResult.className = "success";
+  }
+}
 
-    let emailErrors = [];
-    let passwordErrors = [];
+// --------------------Password Validation---------------------
+function validatePassword() {
+  const password = document.getElementById("password").value;
+  const passwordResult = document.getElementById("passwordResult");
+  let errors = [];
 
-    // -------- EMAIL VALIDATION --------------------------------------------------------------
-    if (!/[A-Z]/.test(email))
-        emailErrors.push("❌ Email must contain at least one uppercase letter");
+  switch (true) {
+    case password.length !== 8:
+      errors.push("❌ Password must be exactly 8 characters");
+    case !/[A-Z]/.test(password):
+      errors.push("❌ Password must contain at least one uppercase letter");
+    case !/^[A-Za-z]+$/.test(password):
+      errors.push("❌ Password must not contain numbers or special characters");
+  }
 
-    if (!/[a-z]/.test(email))
-        emailErrors.push("❌ Email must contain at least one lowercase letter");
-
-    if (!email.includes("@"))
-        emailErrors.push("❌ Email must include '@'");
-
-    if (!email.includes(".com"))
-        emailErrors.push("❌ Email must end with '.com'");
-
-    if (emailErrors.length === 0) {
-        emailResult.style.color = "green";
-        emailResult.innerHTML = "✅ Valid email address!";
-    } else {
-        emailResult.style.color = "red";
-        emailResult.innerHTML = "❌ Invalid Email!";
-        alert(emailErrors.join("\n"));
-    }
-    
-    // -------- PASSWORD VALIDATION -----------------------------------------------
-    if (password.length !== 8)
-        passwordErrors.push("❌ Password must be exactly 8 characters");
-
-    if (!/^[A-Za-z]+$/.test(password))
-        passwordErrors.push("❌ Password must not contain special characters");
-
-    if (!/[A-Z]/.test(password))
-        passwordErrors.push("❌ Password must contain at least one uppercase letter");
-
-    if (!/^[A-Z][a-z]+$/.test(password))
-        passwordErrors.push("❌ Remaining letters must be lowercase");
-
-    if (passwordErrors.length === 0) {
-        passwordResult.style.color = "green";
-        passwordResult.innerHTML = "✅ Password is Strong!";
-    } else {
-        passwordResult.style.color = "red";
-        passwordResult.innerHTML = "❌ Password is Weak!";
-        alert(passwordErrors.join("\n"));
-    }
+  if (errors.length > 0) {
+    alert(errors.join("\n"));
+    passwordResult.innerHTML =
+      "❌ Password is Weak!<br>" + errors.join("<br>");
+    passwordResult.className = "error";
+  } else {
+    passwordResult.innerHTML = "✅ Password is Strong!";
+    passwordResult.className = "success";
+  }
 }
