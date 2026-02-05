@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>DC vs RCB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>IPL Teams</h1>
+
+  <!-- ================= DC SECTION ================= -->
+  <section class="team-slider dc-bg">
+    <h2>Delhi Capitals</h2>
+  
+    <div class="slider">
+      <button onclick="prevDC()">❮</button>
+      <img id="dcImg" src="images/dc1.jpeg" />
+      <button onclick="nextDC()">❯</button>
+    </div>
+  
+    <div id="dcBox">
+      <p>DC is a very hardworking team in the IPL</p>
+    </div>
+  
+    <button class="action-btn" onclick="toggleBox('dcBox')">
+      Show / Hide
+    </button>
+  </section>
+  
+  <!-- ================= RCB SECTION ================= -->
+  <section class="team-slider rcb-bg">
+    <h2>Royal Challengers Bengaluru</h2>
+  
+    <div class="slider">
+      <button onclick="prevRCB()">❮</button>
+      <img id="rcbImg" src="images/rcb1.jpeg" />
+      <button onclick="nextRCB()">❯</button>
+    </div>
+  
+    <div id="rcbBox">
+      <p>RCB is the most trolled team in the world</p>
+    </div>
+  
+    <button class="action-btn" onclick="toggleBox('rcbBox')">
+      Show / Hide
+    </button>
+  </section>
+  
+  <!-- ================= COUNTER ================= -->
+  <section>
+    <div class="counter-box">
+      <h3>Live Counter</h3>
+      <button onclick="decrement()">➖</button>
+      <span id="count">0</span>
+      <button onclick="increment()">➕</button>
+    </div>
+  </section>
+
+  <script src="9.js"></script>
+</body>
+
+</html>
