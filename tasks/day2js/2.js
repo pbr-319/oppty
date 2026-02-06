@@ -31,7 +31,7 @@ if (num1 > 0) {
 }
 
 // if-else statement
-const num2 = -10;
+let num2 = -10;
 
 if (num2 > 0) {
     console.log("Number:", "positive.");
@@ -40,7 +40,7 @@ if (num2 > 0) {
 }
 
 // else-if statement
-let Marks = 80;
+let Marks = prompt("enter marks:");
 if (Marks >= 75) {
     console.log("Result:","Distinction");
 } else if (Marks >45) {
