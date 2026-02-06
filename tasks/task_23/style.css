@@ -6,6 +6,7 @@ body {
 .main-title {
     text-align: left;
     margin-bottom: 30px;
+    margin: 20px 40px;
 }
 .project-box {
     border: 2px dashed green;
@@ -32,7 +33,7 @@ th {
 td {
     padding: 10px;
     border: 1px solid #ddd;
-    vertical-align: top;
+    vertical-align: center;
 }
 .description {
     border: 1px solid #ddd;
@@ -42,14 +43,16 @@ td {
 }
 .image-row {
     display: flex;
-    gap: 15px;
+    gap: 40px;
     justify-content: center;
     flex-wrap: wrap;
 }
 .image-row img {
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
+    width: 420px;
+    height: 230px;
     border: 1px solid #ccc;
     padding: 4px;
+}
+.amount{
+    color: #2f6b2f;
 }
