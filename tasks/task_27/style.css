@@ -24,6 +24,25 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 25px 60px;
+    margin-bottom: -50px;
+}
+.dot{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.red{
+    height: 20px;
+    width: 20px;
+    background: linear-gradient(90deg,var(--orange),var(--blue));
+}
+.symbol{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid #f5f5f5;
+    background: linear-gradient(90deg,var(--orange),var(--blue));
 }
 .logo{
     font-size: 22px;
@@ -75,19 +94,19 @@ body{
 .title{
     font-size: 130px;
     line-height: 1.1;
-    animation: bounceInDown 1.2s ease;
+    animation: flip 2s ease;
 }
 .title span {
     background: linear-gradient(90deg,var(--orange),var(--blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 .subtitle{
     max-width: 700px;
     margin: 25px auto;
     color: var(--gray);
     font-size: 18px;
-    animation: flip 1s ease;
 }
 .hero-buttons{
     margin-top: 40px;
@@ -97,6 +116,7 @@ body{
 }
 .status-card{
     margin-left:60px;
+    margin-bottom: 60px;
     width:280px;
     padding:25px;
     border-radius: 20px;
@@ -107,6 +127,7 @@ body{
 }
 .status-card:hover{
     transform: translateY(-10px);
+    animation: bounceInDown 1s ease;
 }
 .small{
     font-size: 12px;
