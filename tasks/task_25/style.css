@@ -41,11 +41,21 @@ body {
   gap: 15px;
   margin-bottom: 15px;
 }
+.heading p {
+  margin-top: 15px;
+}
 .number {
   font-size: 20px;
   font-weight: 700;
   color: #9fb3c8;
-  margin-top: -110px;
+  margin-top: -125px;
+}
+.numbers{
+  font-size: 20px;
+  font-weight: 700;
+  color: #9fb3c8;
+  margin-top: -95px;
+
 }
 .heading h3 {
   font-size: 22px;
