@@ -57,6 +57,7 @@ h3 {
     background: var(--primary-color);
     color: #fff;
     animation: fadeIn var(--fade-duration)ease-in-out forwards;
+    animation-iteration-count: 2;
 }
 .cards {
     display: grid;
@@ -107,11 +108,13 @@ h3 {
 @media (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2,1fr);
+        width: 800px;
     }
 }
 @media (max-width: 600px) {
     .box h1 {
         font-size: 28px;
+        width: 300px;
     }
     .cards {
         grid-template-columns: 1fr;
