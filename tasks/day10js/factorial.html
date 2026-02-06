@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Number</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:linear-gradient(135deg, #bee13f, #c9decd);
+            text-align: center;
+            margin-top: 100px;
+        }
+        input{
+            padding: 8px;
+            font-size: 16px;
+        }
+        button{
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result{
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Factorial Number</h2>
+    <input type="number" id="num" placeholder=" please enter a number">
+    <br><br>
+    <button onclick="factorial()">Check</button>
+    <div id="result"></div>
+
+    <script>
+        function factorial() {
+            let n = parseInt(document.getElementById("num").value);
+            let result = document.getElementById("result");
+            let fact = 1;
+            switch(true) {
+                case(isNaN(n) || n < 0):
+                result.innerHTML = "enter a valid  non-negative number";
+                break;
+
+                case(n === 0):
+                result.innerHTML = "factorial of 0 is 1";
+                break;
+
+                default:
+                    for(let i = 1; i <=n; i++) {
+                        fact = fact * i;
+                    }
+                    result.textContent = "factorial of " + n + " is " + fact;
+                    result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

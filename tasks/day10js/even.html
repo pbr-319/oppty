@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even Number</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #004c93, #d71920);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+      h2 {
+        margin-bottom: 15px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background: #007bff;
+        color: white;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      #result {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h2>Even Number</h2>
+      <input type="number" id="numberInput" placeholder=" please enter a number">
+      <button onclick="checkEvent()">check</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function checkEvent() {
+        let num = document.getElementById("numberInput").value;
+        let result = document.getElementById("result");
+        if (num == "") {
+          result.textContent = "please enter a number";
+          result.style.color = "orange";
+        } else if (num % 2 == 0) {
+          result.textContent = num + " is an Even number";
+          result.style.color = "green";
+        } else {
+          result.textContent = num + " is an not Even Number";
+          result.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
+

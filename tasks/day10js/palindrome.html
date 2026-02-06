@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Number</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #e5edc6, #1fe898);
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      input {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 8px 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #result {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Palindrome Number</h2>
+    <input type="text" id="text" placeholder=" please enter text or number" />
+    <br /><br />
+    <button onclick="checkPalindrome()">Check</button>
+    <div id="result"></div>
+
+    <script>
+      function checkPalindrome() {
+        let str = document.getElementById("text").value;
+        let result = document.getElementById("result");
+
+        if (str === "") {
+          result.textContent = "please enter text or number";
+          result.style.color = "black";
+          return;
+        }
+
+        let original = str.toLowerCase();
+        let reversed = original.split("").reverse().join("");
+
+        if (original === reversed) {
+          result.textContent = str + " is a palindrome number ";
+          result.style.color = "green";
+        } else {
+          result.textContent = str + " is not a palindrome number";
+          result.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

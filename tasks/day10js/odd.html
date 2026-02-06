@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odd Number</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #bbe71d, #eedaed);;
+        text-align: center;
+        margin-top: 100px;
+      }
+      input {
+        padding: 8px;
+        font-size: 16px;
+      }
+      button {
+        padding: 8px 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #result {
+         margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Odd Number</h2>
+    <input type="number" id="num" placeholder=" please enter a number">
+    <br><br>
+    <button onclick="checkOdd()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+      function checkOdd() {
+        let n = document.getElementById("num").value;
+        let result = document.getElementById("result");
+        if (n === "") {
+          result.textContent = "please enter anumber";
+          result.style.color = "black";
+        } else if (n % 2 !== 0) {
+          result.textContent = n + " is Odd number";
+          result.style.color = "green";
+          
+        } else {
+          result.textContent = n + " is not Odd number";
+          result.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
