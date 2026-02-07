@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Checker Using Switch</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Prime Number Checker (Using Switch)</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <br><br>
+
+    <button onclick="checkPrime()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkPrime() {
+            let n = parseInt(document.getElementById("num").value);
+            let result = document.getElementById("result");
+            let isPrime = true;
+
+            switch (true) {
+                case (isNaN(n) || n <= 1):
+                    result.innerHTML = "Please enter a number greater than 1";
+                    break;
+
+                case (n === 2):
+                    result.innerHTML = "2 is a Prime Number";
+                    break;
+
+                default:
+                    for (let i = 2; i <= Math.sqrt(n); i++) {
+                        if (n % i === 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+
+                    switch (isPrime) {
+                        case true:
+                            result.innerHTML = n + " is a Prime Number ";
+                            break;
+                        case false:
+                            result.innerHTML = n + " is Not a Prime Number ";
+                            break;
+                    }
+            }
+        }
+    </script>
+
+</body>
+</html>
