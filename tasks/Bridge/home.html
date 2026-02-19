@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridge Bar</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -66,14 +66,15 @@ section{
 }
 .hero{
     height:100vh;
-    background-image:url("slider-img-1.jpg"),
-                      url("slider-img-2.jpg"),
-                      url("slider-img-3.jpg")center/cover no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     position:relative;
+    transition: background-image 1s ease-in-out;
 }
 .hero::after{
     content:"";
@@ -187,6 +188,15 @@ footer p{
     font-size:14px;
     margin:8px 0;
 }
+.social-icons a {
+    color: #fcfefb;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f5f6f5;
+}
 @media(max-width:900px){
 
     .hours-container,
@@ -206,12 +216,21 @@ footer p{
 <div class="navbar">
     <div class="logo">Bridge</div>
     <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Menu</a>
-        <a href="#">Reservations</a>
-        <a href="#">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="Contact.html">Contact</a>
     </div>
+    <a href="https://www.facebook.com/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
     <a href="#" class="btn">Book a Table</a>
 </div>
 
@@ -298,9 +317,9 @@ footer p{
 <footer>
     <div>
         <h3>Bridge</h3>
-        <p>Mon-Sun: 09am - 09pm</p>
-        <p>161 Linden Avenue, London</p>
-        <p>+30 382 431 301</p>
+        <p>🕒Mon-Sun: 09am - 09pm</p>
+        <p>📍161 Linden Avenue, London</p>
+        <p>📞+30 382 431 301</p>
     </div>
 
     <div>
@@ -313,8 +332,10 @@ footer p{
 
     <div>
         <h3>Opening Hours</h3>
-        <p>Mon-Fri: 10:00am - 00:00am</p>
-        <p>Sat-Sun: 10:00am - 03:00am</p>
+        <p>Mon-Fri:</p>
+        <p>10:00am - 00:00am</p>
+        <p>Sat-Sun:</p>
+        <p>10:00am - 03:00am</p>
     </div>
 
     <div>
@@ -327,6 +348,16 @@ footer p{
 function scrollToSection(){
     document.getElementById("hours").scrollIntoView({behavior:"smooth"});
 }
+const images = ["images/slider-img-1.jpg","images/slider-img-2.jpg","images/slider-img-3.jpg"];
+
+let index = 0;
+const hero = document.querySelector(".hero");
+function changeBackground() {
+    hero.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+}
+changeBackground();
+setInterval(changeBackground, 4000);
 </script>
 
 </body>

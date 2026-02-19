@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge - Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#000;
+    color:#fff;
+    line-height:1.6;
+}
+nav {
+    position: absolute;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+}
+nav ul li {
+    cursor: pointer;
+    font-size: 16px;
+}
+.book-btn {
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.book-btn:hover {
+    background: #fff;
+    color: #000;
+}
+.hero{
+    height:80vh;
+    background:url('https://bridge269.qodeinteractive.com/wp-content/uploads/2019/10/menu-title-img.jpg') center/cover no-repeat fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:60px;
+    font-weight:400;
+}
+.section{
+    padding:100px 100px;
+    text-align:center;
+}
+.section-title{
+    font-family:'Playfair Display', serif;
+    font-size:40px;
+    margin-bottom:60px;
+}
+.menu-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px 80px;
+    max-width:1000px;
+    margin:auto;
+}
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    padding-bottom:10px;
+}
+.menu-name{
+    text-align:left;
+}
+.menu-name h4{
+    font-weight:400;
+    font-size:18px;
+}
+.menu-name p{
+    font-size:12px;
+    opacity:0.6;
+}
+.price{
+    font-size:16px;
+}
+.image-section{
+    height:400px;
+    background:url("images/single-img-2.jpg") center/cover no-repeat fixed;
+}
+footer{
+    padding:60px 100px;
+    background:#0a0a0a;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
+}
+footer h3{
+    margin-bottom:20px;
+    font-family:'Playfair Display', serif;
+}
+footer p{
+    font-size:14px;
+    opacity:0.7;
+}
+#topBtn{
+    position:fixed;
+    bottom:40px;
+    right:40px;
+    background:#fff;
+    color:#000;
+    padding:10px 15px;
+    cursor:pointer;
+    display:none;
+    border-radius:50%;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #fcfefb;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f5f6f5;
+}
+@media(max-width:900px){
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        padding:20px 30px;
+    }
+
+    .section{
+        padding:80px 30px;
+    }
+
+    footer{
+        grid-template-columns:1fr;
+        padding:60px 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+<nav>
+    <div class="logo">Bridge</div>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Menu</li>
+        <li>Reservations</li>
+        <li>Contact</li>
+    </ul>
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <div class="book-btn">Book a table</div>
+</nav>
+
+
+
+<div class="hero">
+    <h1>Menu</h1>
+</div>
+
+<section class="section">
+    <div class="section-title">Cocktails</div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Royal Arrival</h4>
+                <p>Captain Morgan spiced rum, pineapple</p>
+            </div>
+            <div class="price">$19</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Tequila Sunrise</h4>
+                <p>Tequila, orange juice, grenadine</p>
+            </div>
+            <div class="price">$14</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Cuba Libre</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Cuba Libre</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Cuba Libre</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Cuba Libre</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Cuba Libre</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Michelada</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$19</div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-title">Wine Selection</div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Léoville-Las Cases</h4>
+                <p>Saint-Julien, France</p>
+            </div>
+            <div class="price">$19</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Corton-Charlemagne</h4>
+                <p>Cote de Beaune, France</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Meiomi Pinot Noir</h4>
+                <p>California</p>
+            </div>
+            <div class="price">$17</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Hermitage La Chapelle</h4>
+                <p>Rhone, France</p>
+            </div>
+            <div class="price">$14</div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-title">Craft beer</div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Yuengling Lager</h4>
+                <p>Captain Morgan spiced rum, pineapple</p>
+            </div>
+            <div class="price">$19</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Southern Star</h4>
+                <p>Tequila,orange juice, grenadine</p>
+            </div>
+            <div class="price">$14</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Southern Star</h4>
+                <p>Tequila,orange juice, grenadine</p>
+            </div>
+            <div class="price">$14</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Southern Star</h4>
+                <p>Tequila,orange juice, grenadine</p>
+            </div>
+            <div class="price">$14</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="menu-name">
+                <h4>Ranch Imperial</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+        </div>
+
+         <div class="menu-item">
+            <div class="menu-name">
+                <h4>Ranch Imperial</h4>
+                <p>Dark rum, fresh lime, Coke</p>
+            </div>
+            <div class="price">$22</div>
+    </div>
+</section>
+
+<div class="image-section"></div>
+
+<footer>
+    <div>
+        <h3>Bridge</h3>
+        <p>🕒Mon-Sun: 09am - 09pm</p>
+        <p>📍161 Linden Avenue, London</p>
+        <p>📞+30 382 431 301</p>
+    </div>
+
+    <div>
+        <h3>Pages</h3>
+        <p>Home</p>
+        <p>Reservations</p>
+        <p>Menu</p>
+        <p>Contact</p>
+    </div>
+
+    <div>
+        <h3>Opening hours</h3>
+        <p>Monday - Friday:</p>
+        <p>10:00am - 01:00am</p><br>
+        <p>Saturday - Sunday:</p>
+        <p>10:00am - 03:00am</p>
+    </div>
+
+    <div>
+        <h3>Instagram</h3>
+        <p>@bridgebar</p>
+    </div>
+</footer>
+
+<div id="topBtn">↑</div>
+
+<script>
+window.addEventListener("scroll", function(){
+    let navbar = document.getElementById("navbar");
+    if(window.scrollY > 50){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+
+    let topBtn = document.getElementById("topBtn");
+    if(window.scrollY > 400){
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+});
+
+document.getElementById("topBtn").addEventListener("click", function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+});
+</script>
+
+</body>
+</html>

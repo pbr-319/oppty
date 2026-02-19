@@ -6,6 +6,7 @@
 <title>About - Bridge Bar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -66,7 +67,7 @@ section{
 }
 .hero{
     height:100vh;
-    background-image:url('about-img.jpg') center/cover no-repeat;
+    background:url("images/about-title-img.jpg") center/cover no-repeat fixed;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -116,7 +117,7 @@ section{
 }
 .video-section{
     height:70vh;
-    background:url('slider-img-2.jpg') center/cover no-repeat;
+    background:url("images/slider-img-3.jpg") center/cover no-repeat;
     position:relative;
     display:flex;
     justify-content:center;
@@ -165,6 +166,15 @@ footer p{
     margin:8px 0;
     color:#bbb;
 }
+.social-icons a {
+    color: #fcfefb;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f5f6f5;
+}
 @media(max-width:900px){
 
     .story{
@@ -187,12 +197,21 @@ footer p{
 <div class="navbar" id="navbar">
     <div class="logo">Bridge</div>
     <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Menu</a>
-        <a href="#">Reservations</a>
-        <a href="#">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="Contact.html">Contact</a>
     </div>
+    <a href="https://www.facebook.com/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
     <a href="#" class="btn">Book a Table</a>
 </div>
 
@@ -223,9 +242,9 @@ footer p{
 <footer>
     <div>
         <h3>Bridge</h3>
-        <p>Mon-Sun: 09am - 09pm</p>
-        <p>161 Linden Avenue, London</p>
-        <p>+30 382 431 301</p>
+        <p>🕒Mon-Sun: 09am - 09pm</p>
+        <p>📍161 Linden Avenue, London</p>
+        <p>📞+30 382 431 301</p>
     </div>
 
     <div>
@@ -238,8 +257,10 @@ footer p{
 
     <div>
         <h3>Opening hours</h3>
-        <p>Monday - Friday: 10:00am - 01:00am</p>
-        <p>Saturday - Sunday: 10:00am - 03:00am</p>
+        <p>Monday - Friday:</p>
+        <p>10:00am - 01:00am</p><br>
+        <p>Saturday - Sunday:</p>
+        <p>10:00am - 03:00am</p>
     </div>
 
     <div>
@@ -258,11 +279,15 @@ window.addEventListener("scroll", function(){
 function scrollToVideo(){
     document.getElementById("video").scrollIntoView({behavior:"smooth"});
 }
-
 function playVideo(){
-    alert("Video popup can be added here (YouTube embed).");
+    const videoSection = document.getElementById("video");
+    videoSection.innerHTML = `
+        <iframe width="800" height="450" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+    `;
 }
-
 </script>
 
 </body>
