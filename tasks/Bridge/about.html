@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Bridge Bar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Poppins', sans-serif;
+}
+h1,h2,h3{
+    font-family:'Playfair Display', serif;
+}
+section{
+    padding:100px 10%;
+}
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+    z-index:1000;
+    transition:0.4s;
+}
+.navbar.scrolled{
+    background:#000;
+}
+.logo{
+    font-size:24px;
+    font-weight:600;
+}
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+}
+.btn{
+    border:1px solid #fff;
+    padding:8px 20px;
+    text-decoration:none;
+    color:#fff;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#fff;
+    color:#000;
+}
+.hero{
+    height:100vh;
+    background-image:url('about-img.jpg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+.hero h1{
+    position:relative;
+    font-size:70px;
+    z-index:2;
+}
+.story{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+.story img{
+    width:100%;
+}
+.story-text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+.story-text p{
+    line-height:1.7;
+    color:#bbb;
+    margin-bottom:25px;
+}
+.story-text button{
+    padding:12px 25px;
+    border:1px solid #fff;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+.story-text button:hover{
+    background:#fff;
+    color:#000;
+}
+.video-section{
+    height:70vh;
+    background:url('slider-img-2.jpg') center/cover no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.video-section::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+.play-btn{
+    position:relative;
+    width:80px;
+    height:80px;
+    border:2px solid #fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    z-index:2;
+    transition:0.3s;
+}
+.play-btn:hover{
+    background:#fff;
+    color:#000;
+}
+.play-btn::before{
+    content:"▶";
+    font-size:30px;
+}
+footer{
+    background:#111;
+    padding:80px 10%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+footer h3{
+    margin-bottom:20px;
+}
+footer p{
+    font-size:14px;
+    margin:8px 0;
+    color:#bbb;
+}
+@media(max-width:900px){
+
+    .story{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+    <div class="logo">Bridge</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Reservations</a>
+        <a href="#">Contact</a>
+    </div>
+    <a href="#" class="btn">Book a Table</a>
+</div>
+
+<section class="hero">
+    <h1>About</h1>
+</section>
+
+<section class="story">
+    <div>
+        <img src="images/single-img-1.jpg">
+    </div>
+
+    <div class="story-text">
+        <p style="letter-spacing:2px; color:#aaa;">Behind the scene</p>
+        <h2>Our Story</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <button onclick="scrollToVideo()">View More</button>
+    </div>
+</section>
+
+<section class="video-section" id="video">
+    <div class="play-btn" onclick="playVideo()"></div>
+</section>
+
+<footer>
+    <div>
+        <h3>Bridge</h3>
+        <p>Mon-Sun: 09am - 09pm</p>
+        <p>161 Linden Avenue, London</p>
+        <p>+30 382 431 301</p>
+    </div>
+
+    <div>
+        <h3>Pages</h3>
+        <p>Home</p>
+        <p>Reservations</p>
+        <p>Menu</p>
+        <p>Contact</p>
+    </div>
+
+    <div>
+        <h3>Opening hours</h3>
+        <p>Monday - Friday: 10:00am - 01:00am</p>
+        <p>Saturday - Sunday: 10:00am - 03:00am</p>
+    </div>
+
+    <div>
+        <h3>Instagram</h3>
+        <p>@bridgebar</p>
+    </div>
+</footer>
+
+<script>
+
+window.addEventListener("scroll", function(){
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+function scrollToVideo(){
+    document.getElementById("video").scrollIntoView({behavior:"smooth"});
+}
+
+function playVideo(){
+    alert("Video popup can be added here (YouTube embed).");
+}
+
+</script>
+
+</body>
+</html>

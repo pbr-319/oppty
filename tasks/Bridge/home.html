@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Bar</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    background:#000;
+    color:#fff;
+}
+h1,h2,h3{
+    font-family:'Playfair Display', serif;
+}
+section{
+    padding:80px 10%;
+}
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(5px);
+    z-index:1000;
+}
+.logo{
+    font-size:24px;
+    font-weight:600;
+}
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+}
+.btn{
+    border:1px solid #fff;
+    padding:8px 18px;
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#fff;
+    color:#000;
+}
+.hero{
+    height:100vh;
+    background-image:url("slider-img-1.jpg"),
+                      url("slider-img-2.jpg"),
+                      url("slider-img-3.jpg")center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+.hero h1{
+    font-size:60px;
+    margin:20px 0;
+}
+.hero p{
+    font-size:14px;
+    letter-spacing:2px;
+}
+.hero button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:transparent;
+    border:1px solid #fff;
+    color:#fff;
+    cursor:pointer;
+    transition:0.3s;
+}
+.hero button:hover{
+    background:#fff;
+    color:#000;
+}
+.reservation{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#111;
+}
+.reservation input, .reservation select{
+    padding:12px;
+    background:#000;
+    border:1px solid #333;
+    color:#fff;
+}
+.reservation button{
+    padding:12px 20px;
+    background:#fff;
+    color:#000;
+    border:none;
+    cursor:pointer;
+}
+.hours-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+.hours-box{
+    text-align:center;
+}
+.hours-box h2{
+    margin-bottom:20px;
+    font-size:30px;
+}
+.hours-box p{
+    margin:10px 0;
+}
+.specials{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    border-bottom:1px solid #333;
+    padding-bottom:10px;
+}
+.specials img{
+    width:100%;
+}
+.promotions{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+.promo-box{
+    height:250px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-family:'Playfair Display', serif;
+}
+footer{
+    background:#111;
+    padding:60px 10%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+footer h3{
+    margin-bottom:20px;
+}
+footer p{
+    font-size:14px;
+    margin:8px 0;
+}
+@media(max-width:900px){
+
+    .hours-container,
+    .specials,
+    .promotions,
+    footer{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">Bridge</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Reservations</a>
+        <a href="#">Contact</a>
+    </div>
+    <a href="#" class="btn">Book a Table</a>
+</div>
+
+<section class="hero">
+    <div class="hero-content">
+        <p>Exclusive drink service</p>
+        <h1>Cocktail stage evenings</h1>
+        <button onclick="scrollToSection()">View More</button>
+    </div>
+</section>
+
+
+<section class="reservation">
+    <input type="number" placeholder="1 Person">
+    <input type="date" placeholder="dd/mm/yy">
+    <input type="time" placeholder="hours">
+    <button>Book a Table</button>
+</section>
+
+<section id="hours">
+<div class="hours-container">
+    <div class="hours-box">
+        <h2>Open Hours</h2>
+        <p>Monday - Friday: 4:00 pm - 1:00 am</p>
+        <p>Saturday: 4:00 pm - 3:00 am</p>
+        <p>Sunday: 4:00 pm - 2:00 am</p>
+    </div>
+
+    <div>
+        <img src="images/single-img-1.jpg" width="100%">
+    </div>
+
+    <div class="hours-box">
+        <h2>Happy Hour</h2>
+        <p>Monday - Sunday: 4:00 pm - 7:00 pm</p>
+        <p>20% off all wine by the glass</p>
+        <p>25% off selected craft beer</p>
+    </div>
+</div>
+</section>
+
+<section>
+    <div class="specials">
+        <div>
+            <h2>We Recommend</h2>
+            <div class="menu-item">
+                <span>Coco Spice</span>
+                <span>$19</span>
+            </div>
+            <div class="menu-item">
+                <span>Tequila Sunrise</span>
+                <span>$14</span>
+            </div>
+            <div class="menu-item">
+                <span>Cuba Libre</span>
+                <span>$22</span>
+            </div>
+            <div class="menu-item">
+                <span>Gin Fizz</span>
+                <span>$24</span>
+            </div>
+        </div>
+
+        <div>
+            <img src="images/single-img-2.jpg">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="promotions">
+        <div class="promo-box" style="background-image:url('https://images.unsplash.com/photo-1470337458703-46ad1756a187')">
+            Promotions
+        </div>
+        <div class="promo-box" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93')">
+            Location
+        </div>
+        <div class="promo-box" style="background-image:url('https://images.unsplash.com/photo-1497534446932-c925b458314e')">
+            Events
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <h3>Bridge</h3>
+        <p>Mon-Sun: 09am - 09pm</p>
+        <p>161 Linden Avenue, London</p>
+        <p>+30 382 431 301</p>
+    </div>
+
+    <div>
+        <h3>Pages</h3>
+        <p>Home</p>
+        <p>Menu</p>
+        <p>Reservations</p>
+        <p>Contact</p>
+    </div>
+
+    <div>
+        <h3>Opening Hours</h3>
+        <p>Mon-Fri: 10:00am - 00:00am</p>
+        <p>Sat-Sun: 10:00am - 03:00am</p>
+    </div>
+
+    <div>
+        <h3>Instagram</h3>
+        <p>@bridgebar</p>
+    </div>
+</footer>
+
+<script>
+function scrollToSection(){
+    document.getElementById("hours").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
