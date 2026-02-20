@@ -165,11 +165,11 @@ nav a {
 <nav>
     <div class="logo">Bridge</div>
     <ul>
-        <li><a href="home.html"></a>Home</li>
-        <li><a href="about.html"></a>About</li>
-        <li><a href="menu.html"></a>Menu</li>
-        <li><a href="reservations.html"></a>Reservations</li>
-        <li><a href="Contact.html"></a>Contact</li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="Contact.html">Contact</a></li>
     </ul>
     <div>
         <a href="https://www.facebook.com/" target="_blank">
@@ -202,7 +202,7 @@ nav a {
             <input type="date" id="date">
             <input type="time" id="time">
 
-            <button onclick="bookTable()">Book a Table</button>
+            <button id="reserveBtn">Book a Table</button>
         </div>
     </div>
 </section>
@@ -241,7 +241,7 @@ nav a {
 </footer>
 
 <script>
-function bookTable() {
+document.getElementById("reserveBtn").addEventListener("click",function() {
     const people = document.getElementById("people").value;
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
@@ -252,7 +252,7 @@ function bookTable() {
     }
 
     alert(`Reservation Confirmed!\n\n${people}\nDate: ${date}\nTime: ${time}`);
-}
+});
 </script>
 
 </body>
