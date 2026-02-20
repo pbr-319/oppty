@@ -148,6 +148,14 @@ footer p{
 .social-icons a:hover {
     color: #f5f6f5;
 }
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    opacity: 0.7;
+}
 @media(max-width:900px){
     .menu-grid{
         grid-template-columns:1fr;
@@ -170,14 +178,14 @@ footer p{
 </head>
 
 <body>
-<nav>
+<nav id="navbar">
     <div class="logo">Bridge</div>
     <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Menu</li>
-        <li>Reservations</li>
-        <li>Contact</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html"></a>About</li>
+        <li><a href="menu.html"></a>Menu</li>
+        <li><a href="reservations.html"></a>Reservations</li>
+        <li><a href="Contact.html"></a>Contact</li>
     </ul>
         <a href="https://www.facebook.com/" target="_blank">
             <i class="fab fa-facebook-f"></i>
@@ -419,10 +427,10 @@ footer p{
 
     <div>
         <h3>Pages</h3>
-        <p>Home</p>
-        <p>Reservations</p>
-        <p>Menu</p>
-        <p>Contact</p>
+        <p><a href="home.html"></a>Home</p>
+        <p><a href="reservations.html"></a>Reservations</p>
+        <p><a href="menu.html"></a>Menu</p>
+        <p><a href="Contact.html"></a>Contact</p>
     </div>
 
     <div>
