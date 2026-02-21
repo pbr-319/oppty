@@ -175,9 +175,30 @@ footer p{
 .social-icons a:hover {
     color: #f5f6f5;
 }
-.navbar a {
-    color: white;
-    margin: 30px;
+
+.right-side{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-social{
+    display:flex;
+    gap: 30px;
+}
+
+.nav-social a{
+    color:#fff;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.nav-social a:hover{
+    color:#ccc;
+}
+
+.btn i{
+    margin-right:8px;
 }
 @media(max-width:900px){
 
@@ -200,6 +221,7 @@ footer p{
 
 <div class="navbar" id="navbar">
     <div class="logo">Bridge</div>
+
     <div class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -207,16 +229,24 @@ footer p{
         <a href="reservations.html">Reservations</a>
         <a href="Contact.html">Contact</a>
     </div>
-    <a href="https://www.facebook.com/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
+
+    <div class="right-side">
+        <div class="nav-social">
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <a href="#" class="btn">
+            <i class="fas fa-calendar-alt"></i> Book a Table
         </a>
-        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-    <a href="#" class="btn">Book a Table</a>
+    </div>
 </div>
 
 <section class="hero">
@@ -232,20 +262,38 @@ footer p{
         <p style="letter-spacing:2px; color:#aaa;">Behind the scene</p>
         <h2>Our Story</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+           sed do ni eiusmod tempor incididunt ut labore et dolore 
+           magna aliqua. Ut enim ad minim an veniam, quis
+           nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            nie commodo consequat. Duis aute irure in nulla 
+           pariatur Excepteur sint occaecat cupidatat non proiden
+            sunt in culpa qui officia
         </p>
         <button onclick="scrollToVideo()">View More</button>
     </div>
 </section>
 
-<section class="video-section" id="video">
-    <div class="play-btn" onclick="playVideo()"></div>
-</section>
+<!-- <<section class="video-section" id="video">
+    <div class="video-overlay">
+        <div class="play-btn" onclick="playVideo()"></div>
+    </div>
 
+    <div class="video-container" id="videoContainer"></div>
+</section> -->
+
+<div>
+    <video width="100%" height="400" controls>
+<source src="https://media.geeksforgeeks.org/wp-content/uploads/20231020155223/Full-Stack-Development-_-LIVE-Classes-_-GeeksforGeeks.mp4" type="video/mp4">
+<source src="movie.webm" type="video/webm">
+Your browser does not support the video tag
+</video>
+</div>
 <footer>
     <div>
         <h3>Bridge</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+           sed do ni eiusm</p><br>
         <p>🕒Mon-Sun: 09am - 09pm</p>
         <p>📍161 Linden Avenue, London</p>
         <p>📞+30 382 431 301</p>
@@ -254,7 +302,7 @@ footer p{
     <div>
         <h3>Pages</h3>
         <p>Home</p>
-        <p>Reservations</p>
+        <p>Reservations</p><br>
         <p>Menu</p>
         <p>Contact</p>
     </div>
@@ -269,11 +317,11 @@ footer p{
 
     <div>
         <h3>Instagram</h3>
-        <p>@bridgebar</p>
+       
     </div>
 </footer>
 
-<script>
+<!-- <script>
 
 window.addEventListener("scroll", function(){
     const navbar = document.getElementById("navbar");
@@ -284,15 +332,21 @@ function scrollToVideo(){
     document.getElementById("video").scrollIntoView({behavior:"smooth"});
 }
 function playVideo(){
-    const videoSection = document.getElementById("video");
-    videoSection.innerHTML = `
-        <iframe width="800" height="450" 
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    const container = document.getElementById("videoContainer");
+
+    container.innerHTML = `
+        <iframe 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
         </iframe>
     `;
+
+    container.style.display = "block";
+
+    document.querySelector(".video-overlay").style.display = "none";
 }
-</script>
+</script> -->
 
 </body>
 </html>

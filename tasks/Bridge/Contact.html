@@ -54,7 +54,7 @@ nav ul li {
 }
 nav a {
     color: white;
-    margin: 50px;
+    text-decoration: none;
 }
 .book-btn {
     border: 1px solid #fff;
@@ -114,6 +114,19 @@ nav a {
   flex:1;
   min-width:300px;
 }
+.btn-outline {
+  border: 1px solid #fff;
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
 
 form{
   display:flex;
@@ -166,14 +179,25 @@ footer p{
   font-size:14px;
   margin-bottom:8px;
 }
-.social-icons a {
-    color: #fcfefb;
-    font-size: 16px;
-    transition: 0.3s;
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.social-icons a:hover {
-    color: #f5f6f5;
+.social-icons{
+    display:flex;
+    gap:30px;
+}
+
+.social-icons a{
+    color:#fff;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#ccc;
 }
 @media(max-width:768px){
 
@@ -213,7 +237,9 @@ footer p{
         <li><a href="reservations.html">Reservations</a></li>
         <li><a href="Contact.html">Contact</a></li>
     </ul>
-    <a href="https://www.facebook.com/" target="_blank">
+    <div class="nav-right">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank">
             <i class="fab fa-facebook-f"></i>
         </a>
         <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
@@ -222,7 +248,9 @@ footer p{
         <a href="https://www.instagram.com/?hl=en" target="_blank">
             <i class="fab fa-instagram"></i>
         </a>
+    </div>
     <div class="book-btn">Book a table</div>
+</div>
 </nav>
 </header>
 
@@ -235,10 +263,10 @@ footer p{
   <div class="contact-left">
     <h4>Contact us</h4>
     <h2>Get in touch</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+       enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea com.</p>
 
     <div class="info">
       <p>🕒 Mon-Sun: 09am - 09pm</p>
@@ -270,23 +298,23 @@ footer p{
   <div class="footer-container">
 
     <div>
-      <h3>Bridge</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>🕒 Mon-Sun: 09am - 09pm</p>
-      <p>📍 1611 Linden Avenue, London</p>
-      <p>📞 301-382-4311</p>
+      <h1>Bridge</h1>
+      <p>Lorem ipsum dolor sit amet, consect etur dip isicing elit, sed do eiusm</p><br>
+      <p>🕒 Mon-Sun: 09am - 09pm</p><br>
+      <p>📍 1611 Linden Avenue, London</p><br>
+      <p>📞 301-382-4311</p><br>
     </div>
 
     <div>
-      <h4>Pages</h4>
-      <p>Home</p>
-      <p>Reservations</p>
-      <p>Menu</p>
-      <p>Contact</p>
+      <h2>Pages</h2><br>
+      <p>Home</p><br>
+      <p>Reservations</p><br>
+      <p>Menu</p><br>
+      <p>Contact</p><br>
     </div>
 
     <div>
-      <h4>Opening Hours</h4>
+      <h2>Opening Hours</h2><br>
       <p>Mon - Fri:</p>
       <p>10:00am - 01:00am</p><br>
       <p>Sat - Sun:</p>
@@ -295,7 +323,6 @@ footer p{
 
     <div>
       <h4>Instagram</h4>
-      <p>@bridge_restaurant</p>
     </div>
 
   </div>

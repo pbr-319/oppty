@@ -137,27 +137,24 @@ footer p{
     display:none;
     border-radius:50%;
 }
-.social-icons {
+.right-side{
     display: flex;
-    gap: 15px;
     align-items: center;
+    gap: 20px;
 }
 
-.social-icons a {
-    color: #fcfefb;
+.social-icons{
+    display: flex;
+    gap: 5px;
+}
+
+.social-icons a{
+    color: white;
     font-size: 16px;
     transition: 0.3s;
 }
 
-.social-icons a:hover {
-    color: #f5f6f5;
-}
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-nav ul li a:hover{
+.social-icons a:hover{
     opacity: 0.7;
 }
 @media(max-width:900px){
@@ -191,17 +188,20 @@ nav ul li a:hover{
         <li><a href="reservations.html">Reservations</a></li>
         <li><a href="Contact.html">Contact</a></li>
     </ul>
+       <div class="right-side">
+    <div class="social-icons">
         <a href="https://www.facebook.com/" target="_blank">
             <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
+        <a href="https://x.com/" target="_blank">
             <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank">
+        <a href="https://www.instagram.com/" target="_blank">
             <i class="fab fa-instagram"></i>
         </a>
     </div>
     <div class="book-btn">Book a table</div>
+</div>
 </nav>
 
 
@@ -211,6 +211,7 @@ nav ul li a:hover{
 </div>
 
 <section class="section">
+    <p style="letter-spacing:2px; font-size:15px;">Our choice</p>
     <div class="section-title">Cocktails</div>
 
     <div class="menu-grid">
@@ -281,6 +282,7 @@ nav ul li a:hover{
 </section>
 
 <section class="section">
+    <p style="letter-spacing:2px; font-size:15px;">We recommend</p>
     <div class="section-title">Wine Selection</div>
 
     <div class="menu-grid">
@@ -367,6 +369,7 @@ nav ul li a:hover{
 </section>
 
 <section class="section">
+    <p style="letter-spacing:2px; font-size:15px;">New arrivals</p>
     <div class="section-title">Craft beer</div>
 
     <div class="menu-grid">
@@ -424,6 +427,8 @@ nav ul li a:hover{
 <footer>
     <div>
         <h3>Bridge</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+           sed do ni eiusm</p><br>
         <p>🕒Mon-Sun: 09am - 09pm</p>
         <p>📍161 Linden Avenue, London</p>
         <p>📞+30 382 431 301</p>
@@ -447,7 +452,6 @@ nav ul li a:hover{
 
     <div>
         <h3>Instagram</h3>
-        <p>@bridgebar</p>
     </div>
 </footer>
 

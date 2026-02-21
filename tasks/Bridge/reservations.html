@@ -41,15 +41,37 @@ nav ul li {
     cursor: pointer;
     font-size: 16px;
 }
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;   
+}
+
+.nav-right a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-right a:hover {
+    color: #ccc;
+}
 .book-btn {
     border: 1px solid #fff;
     padding: 8px 20px;
+    background: transparent;
+    color: #fff;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 
+        background 0.3s ease,
+        color 0.3s ease,
+        border 0.3s ease;
 }
 .book-btn:hover {
     background: #fff;
     color: #000;
+    border-color: #fff;
 }
 .hero {
     height: 90vh;
@@ -144,7 +166,7 @@ footer ul {
 }
 nav a {
     color: white;
-    margin: 30px;
+    text-decoration: none;
 }
 
 @media(max-width: 900px) {
@@ -171,19 +193,19 @@ nav a {
         <li><a href="reservations.html">Reservations</a></li>
         <li><a href="Contact.html">Contact</a></li>
     </ul>
-    <div>
-        <a href="https://www.facebook.com/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        
-    </div>
+    <div class="nav-right">
+    <a href="https://www.facebook.com/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/?hl=en" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
     <button class="book-btn">Book a table</button>
+</div>
     
 </nav>
 
@@ -211,19 +233,20 @@ nav a {
 <footer>
     <div class="footer-column">
         <h3>Bridge</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p>🕒Mon-Sun: 09am - 09pm</p>
-        <p>📍1611 Linden Avenue, London</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+           sed do ni eiusm</p><br>
+        <p>🕒Mon-Sun: 09am - 09pm</p><br>
+        <p>📍1611 Linden Avenue, London</p><br>
         <p>📞301-382-4311</p>
     </div>
 
     <div class="footer-column">
         <h3>Pages</h3>
         <ul>
-            <li>Home</li>
-            <li>Reservations</li>
-            <li>Menu</li>
-            <li>Contact</li>
+            <li>Home</li><br>
+            <li>Reservations</li><br>
+            <li>Menu</li><br>
+            <li>Contact</li><br>
         </ul>
     </div>
 
@@ -237,7 +260,6 @@ nav a {
 
     <div class="footer-column">
         <h3>Instagram</h3>
-        <p>@bridge.restaurant</p>
     </div>
 </footer>
 

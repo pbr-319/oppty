@@ -112,7 +112,7 @@ section{
     display:flex;
     justify-content:center;
     gap:20px;
-    background:#111;
+    background:#000;
 }
 .reservation input, .reservation select{
     padding:12px;
@@ -121,6 +121,13 @@ section{
     color:#fff;
 }
 .reservation button{
+    padding:12px 20px;
+    background:black;
+    color:white;
+    border:1px solid white;
+    cursor:pointer;
+}
+.reservation button:hover{
     padding:12px 20px;
     background:#fff;
     color:#000;
@@ -162,8 +169,9 @@ section{
 .promotions{
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
-    gap:20px;
+    gap:0;
 }
+
 .promo-box{
     height:250px;
     background-size:cover;
@@ -173,6 +181,7 @@ section{
     align-items:center;
     font-size:24px;
     font-family:'Playfair Display', serif;
+    margin:0;
 }
 footer{
     background:#111;
@@ -188,18 +197,33 @@ footer p{
     font-size:14px;
     margin:8px 0;
 }
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
 .social-icons a {
-    color: #fcfefb;
-    font-size: 16px;
+    color: #fff;
+    font-size: 14px;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: #f5f6f5;
+    color: #ccc;
 }
-.navbar a {
-    color: white;
-    margin: 30px;
+.box{
+    text-align: center;
+}
+.content{
+    background: url(images/menu-title-img.jpg)center/cover no-repeat fixed;
+    width: 100%;
+    height: 100vh;
 }
 @media(max-width:900px){
 
@@ -219,6 +243,7 @@ footer p{
 <body>
 <div class="navbar">
     <div class="logo">Bridge</div>
+
     <div class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -226,18 +251,23 @@ footer p{
         <a href="reservations.html">Reservations</a>
         <a href="Contact.html">Contact</a>
     </div>
-    <a href="https://www.facebook.com/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/?hl=en" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-    <a href="#" class="btn">Book a Table</a>
-</div>
 
+    <div class="nav-right">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <a href="#" class="btn">Book a Table</a>
+    </div>
+</div>
 <section class="hero">
     <div class="hero-content">
         <p>Exclusive drink service</p>
@@ -248,7 +278,7 @@ footer p{
 
 
 <section class="reservation">
-    <input type="number" placeholder="">
+    <input type="number" placeholder="1person">
     <input type="date" placeholder="dd/mm/yy">
     <input type="time" placeholder="hours">
     <button>Book a Table</button>
@@ -257,10 +287,15 @@ footer p{
 <section id="hours">
 <div class="hours-container">
     <div class="hours-box">
+        <p><i>Visit a bar</i></p>
         <h2>Open Hours</h2>
-        <p>Monday - Friday: 4:00 pm - 1:00 am</p>
-        <p>Saturday: 4:00 pm - 3:00 am</p>
-        <p>Sunday: 4:00 pm - 2:00 am</p>
+        <p>Monday - Friday:</p>
+        <p>4:00 pm - 1:00 am</p><br>
+        <p>Saturday:</p>
+        <p>4:00 pm - 3:00 am</p><br>
+        <p>Sunday:</p>
+        <p>4:00 pm - 2:00 am</p><br>
+        <p>Visit Us</p>
     </div>
 
     <div>
@@ -268,38 +303,76 @@ footer p{
     </div>
 
     <div class="hours-box">
-        <h2>Happy Hour</h2>
-        <p>Monday - Sunday: 4:00 pm - 7:00 pm</p>
+        <p><i>The best offer</i></p>
+        <h2>Happy Hour</h2><br>
+        <p>Monday - Sunday:</p>
+        <p>4:00 pm - 7:00 pm</p><br>
         <p>20% off all wine by the glass</p>
+        <p>15% off all cocktails</p><br>
         <p>25% off selected craft beer</p>
+        <p>10% off all spirits</p><br>
+         <p>Visit Us</p>
     </div>
 </div>
 </section>
 
+<div class="content"></div>
+
+<div class="box">
+            <p style="letter-spacing:2px; font-size:10px;">This week’s specials</p>
+            <h1>We Recommend</h1>
+            <p style="margin:15px 20px 30px; font-size:14px; color:#ccc;">Lorem ipsum dolor sit amet, consectetur 
+                adipisicing elit sed eiu smod tempor incididunt ut labore etdo
+            </p>
+
+</div>
+
 <section>
     <div class="specials">
         <div>
-            <h2>We Recommend</h2>
             <div class="menu-item">
-                <span>Coco Spice</span>
+                <div>
+                    <strong>Coco Spice</strong>
+                    <p style="font-size:13px; color:#aaa; margin-top:5px;">
+                        Captain Morgan spiced rum, pineapple
+                    </p>
+                </div>
                 <span>$19</span>
             </div>
+
             <div class="menu-item">
-                <span>Tequila Sunrise</span>
+                <div>
+                    <strong>Tequila Sunrise</strong>
+                    <p style="font-size:13px; color:#aaa; margin-top:5px;">
+                        Tequila, orange juice, grenadine
+                    </p>
+                </div>
                 <span>$14</span>
             </div>
+
             <div class="menu-item">
-                <span>Cuba Libre</span>
+                <div>
+                    <strong>Cuba Libre</strong>
+                    <p style="font-size:13px; color:#aaa; margin-top:5px;">
+                        Dark rum, fresh lime, Coke
+                    </p>
+                </div>
                 <span>$22</span>
             </div>
+
             <div class="menu-item">
-                <span>Gin Fizz</span>
+                <div>
+                    <strong>Gin Fizz</strong>
+                    <p style="font-size:13px; color:#aaa; margin-top:5px;">
+                        Bombay Sapphire gin, ginger beer, lime juice
+                    </p>
+                </div>
                 <span>$24</span>
             </div>
         </div>
 
         <div>
-            <img src="images/single-img-2.jpg">
+            <img src="images/single-img-2.jpg" alt="Cocktail Image">
         </div>
     </div>
 </section>
@@ -321,6 +394,7 @@ footer p{
 <footer>
     <div>
         <h3>Bridge</h3>
+        
         <p>🕒Mon-Sun: 09am - 09pm</p>
         <p>📍161 Linden Avenue, London</p>
         <p>📞+30 382 431 301</p>
@@ -352,14 +426,17 @@ footer p{
 function scrollToSection(){
     document.getElementById("hours").scrollIntoView({behavior:"smooth"});
 }
+
 const images = ["images/slider-img-1.jpg","images/slider-img-2.jpg","images/slider-img-3.jpg"];
 
 let index = 0;
 const hero = document.querySelector(".hero");
+
 function changeBackground() {
     hero.style.backgroundImage = `url('${images[index]}')`;
     index = (index + 1) % images.length;
 }
+
 changeBackground();
 setInterval(changeBackground, 4000);
 </script>
