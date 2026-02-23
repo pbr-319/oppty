@@ -265,7 +265,7 @@ footer p{
             </a>
         </div>
 
-        <a href="#" class="btn">Book a Table</a>
+        <a href="reservations.html" class="btn">Book a Table</a>
     </div>
 </div>
 <section class="hero">
@@ -278,10 +278,24 @@ footer p{
 
 
 <section class="reservation">
-    <input type="number" placeholder="1person">
-    <input type="date" placeholder="dd/mm/yy">
-    <input type="time" placeholder="hours">
-    <button>Book a Table</button>
+    <form id="bookingForm">
+    <select id="persons" required>
+    <option value=""></option>
+    <option value="1">1 Person</option>
+    <option value="2">2 Persons</option>
+    <option value="3">3 Persons</option>
+    <option value="4">4 Persons</option>
+    <option value="5">5 Persons</option>
+    <option value="6">6 Persons</option>
+    <option value="7">7 Persons</option>
+    <option value="8">8 Persons</option>
+</select>
+        <input type="date" id="date" required>
+        
+        <input type="time" id="time" required>
+        
+        <button type="submit">Book a Table</button>
+    </form>
 </section>
 
 <section id="hours">
@@ -439,6 +453,20 @@ function changeBackground() {
 
 changeBackground();
 setInterval(changeBackground, 4000);
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const persons = document.getElementById("persons").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    if(persons && date && time){
+        alert(`Table booked for ${persons} person(s) on ${date} at ${time}`);
+    } else {
+        alert("Please fill all fields");
+    }
+});
 </script>
 
 </body>
