@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #b7d32b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.box {
+    background: #ffffff;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #74ebd5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 235, 213, 0.7);
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    background: #28a745;
+    color: white;
+}
+
+.update-btn {
+    background: #dc3545;
+    color: white;
+    display: none;
+}
+
+.edit-btn {
+    background: #6c757d;
+    color: white;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background: #ffc107;
+    color: black;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.student-card {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+        .submit-btn { background: rgb(45, 86, 74); }
+        .update-btn { background: rgb(246, 27, 15); display: none; }
+        .edit-btn { background: rgb(174, 174, 186); }
+        .delete-btn { background: rgb(223, 205, 111); }
+
+        .student-card {
+            background: #e9e9e9;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2> All Students Registration Form</h2>
+    <label>NAME:</label><br>
+    <input type="text" id="name" placeholder="enter name"><br><br>
+    <label>AGE:</label><br>
+    <input type="number" id="age" placeholder="enter age"><br><br>
+     <label>CLASS:</label><br>
+    <input type="text" id="class" placeholder="enter class no"><br><br>
+     <label>SPORTS:</label><br>
+    <input type="text" id="sport" placeholder="enter sport"><br><br>
+
+    <button class="submit-btn" onclick="addStudent()">Submit</button>
+    <button class="update-btn" id="updateBtn" onclick="updateStudent()">Update</button>
+
+    <div id="studentList"></div>
+</div>
+
+<script>
+
+let students = [];
+let editIndex = -1;
+
+function addStudent() {
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const studentClass = document.getElementById("class").value;
+    const sport = document.getElementById("sport").value;
+
+    if (name === "" || age === "" || studentClass === "" || sport === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    students.push({ name, age, studentClass, sport });
+    alert("Registered Successfull");
+
+    displayStudents();
+    clearForm();
+}
+
+function displayStudents() {
+    const list = document.getElementById("studentList");
+    list.innerHTML = "";
+
+    students.forEach((student, index) => {
+        list.innerHTML += `
+            <div class="student-card">
+                <p><b>Name:</b> ${student.name}</p>
+                <p><b>Age:</b> ${student.age}</p>
+                <p><b>Class:</b> ${student.studentClass}</p>
+                <p><b>Sport:</b> ${student.sport}</p>
+                <button class="edit-btn" onclick="editStudent(${index})">Edit</button>
+                <button class="delete-btn" onclick="deleteStudent(${index})">Delete</button>
+            </div>
+        `;
+    });
+}
+
+function editStudent(index) {
+    const student = students[index];
+
+    document.getElementById("name").value = student.name;
+    document.getElementById("age").value = student.age;
+    document.getElementById("class").value = student.studentClass;
+    document.getElementById("sport").value = student.sport;
+
+    editIndex = index;
+
+    document.querySelector(".submit-btn").style.display = "none";
+    document.getElementById("updateBtn").style.display = "inline-block";
+}
+
+function updateStudent() {
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const studentClass = document.getElementById("class").value;
+    const sport = document.getElementById("sport").value;
+
+    students[editIndex] = { name, age, studentClass, sport };
+    alert("Updated successfull");
+
+    displayStudents();
+    clearForm();
+
+    document.querySelector(".submit-btn").style.display = "inline-block";
+    document.getElementById("updateBtn").style.display = "none";
+}
+
+function deleteStudent(index) {
+    students.splice(index, 1);
+    displayStudents();
+}
+
+function clearForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("class").value = "";
+    document.getElementById("sport").value = "";
+}
+
+</script>
+
+</body>
+</html>
