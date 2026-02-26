@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="card">
+
+    <div id="studentForm">
+        <h2>Student Quiz</h2>
+        <label>Stuent Name:</label>
+        <input type="text" id="studentName" placeholder="enter name">
+        <label>Roll Number:</label>
+        <input type="text" id="rollNo" placeholder="enter roll no">
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quizSection" class="hidden">
+        <div class="timer">⏳<span id="time">12:00</span></div>
+        <h2 id="questionTitle"></h2>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p id="questionText"></p>
+        <div class="options" id="options"></div>
+        <button onclick="nextQuestion()" id="nextBtn">Next Question</button>
+    </div>
+
+    <div id="resultSection" class="hidden">
+        <h2>Quiz Result</h2>
+        <div class="result-box">
+            <p><b>Name:</b> <span id="Name"></span></p>
+            <p><b>Roll No:</b> <span id="Roll"></span></p>
+            <p class="score">Score: <span id="Marks"></span>/10</p>
+            <p><b>Accuracy:</b> <span id="Accuracy"></span>%</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

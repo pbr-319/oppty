@@ -1,0 +1,109 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #babcc7, #c3e760);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 500px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .timer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff4d4d;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .progress {
+            height: 8px;
+            background: #ddd;
+            border-radius: 10px;
+            margin: 10px 0 20px 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #667eea;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .options label {
+            display: block;
+            padding: 8px;
+            margin-bottom: 8px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .options label:hover {
+            background: #e0e0ff;
+        }
+
+        button {
+            width: 40%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .result-box p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        .score {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00020a;
+            margin-top: 10px;
+        }
