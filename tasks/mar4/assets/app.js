@@ -4,25 +4,24 @@ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q='
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 
-var weatherIcon = document.querySelector('.weather-icon');
-var cityElement = document.querySelector('.city');
-var tempElement = document.querySelector('.temp');
-var humidityElement = document.querySelector('.humidity');
-var windElement = document.querySelector('.wind');
-var weatherDetails = document.querySelector('.weather-details'); // This is the wrapper for all weather details
+let weatherIcon = document.querySelector('.weather-icon');
+let cityElement = document.querySelector('.city');
+let tempElement = document.querySelector('.temp');
+let humidityElement = document.querySelector('.humidity');
+let windElement = document.querySelector('.wind');
+let weatherDetails = document.querySelector('.weather-details'); // This is the wrapper for all weather details
 
 // Ensure the weather details are hidden initially
 weatherDetails.style.display = 'none';
 
 async function checkWeather(city) {
     if (!city) {
-        // If the search box is empty, hide all weather details
         weatherDetails.style.display = 'none';
         return;
     }
     
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-    var data = await response.json();
+    let data = await response.json();
 
     console.log(data);
 
@@ -36,7 +35,6 @@ async function checkWeather(city) {
         humidityElement.innerHTML = data.main.humidity + '%';
         windElement.innerHTML = data.wind.speed + ' km/h';
 
-        // Set the appropriate weather icon based on weather conditions
         if (data.weather[0].main === 'Clouds') {
             weatherIcon.src = 'assets/img/cloudy-forecast-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Clear') {
@@ -51,7 +49,6 @@ async function checkWeather(city) {
             weatherIcon.src = 'assets/img/snowing-forecast-svgrepo-com.svg';
         }
     } else {
-        // Handle case if the city is not found
         weatherDetails.style.display = 'none';
         alert("City not found!");
     }
@@ -61,7 +58,6 @@ searchBtn.addEventListener('click', () => {
     checkWeather(searchBox.value);
 });
 
-// Optionally, you can add a listener to handle the Enter key
 searchBox.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         checkWeather(searchBox.value);
