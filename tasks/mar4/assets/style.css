@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #222;
+    background: #e5c4c4;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centering the content horizontally */
@@ -24,7 +24,7 @@ body {
 .card {
     width: 90%;
     max-width: 500px;
-    background: linear-gradient(145deg, #ff6fd8, #3813c2);
+    background: linear-gradient(145deg, #ff6fd8, #111013);
     color: #fff;
     margin-top: 20px;
     border-radius: 20px;
