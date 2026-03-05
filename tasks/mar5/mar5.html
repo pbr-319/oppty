@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To-do-List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>To-Do List</h2>
+
+<label>Task:</label><br>
+<input type="text" id="taskInput" placeholder="Enter "><br>
+<label>Date:</label><br>
+<input type="date" id="taskDate"><br>
+<label>Time:</label><br>
+<input type="time" id="taskTime">
+
+<button onclick="taskAction('add')">Add Task</button>
+<button id="updateBtn" onclick="taskAction('update')" style="display:none;">Update Task</button>
+<ul id="taskList"></ul>
+
+</div>
+
+<script src="mar5.js"></script>
+
+</body>
+</html>

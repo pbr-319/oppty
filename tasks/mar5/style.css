@@ -1,0 +1,71 @@
+body{
+font-family: Arial;
+background:#f2f2f2;
+display:flex;
+justify-content:center;
+margin-top:50px;
+}
+
+.container{
+background:white;
+padding:20px;
+width: 300px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+h2 {
+    text-align:left;
+}
+
+input{
+width:50%;
+padding:8px;
+margin:5px ;
+}
+
+button{
+background:#007bff;
+color:white;
+border:none;
+cursor:pointer;
+margin-left: 50px;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+background:#eee;
+margin:5px 0;
+padding:10px;
+border-radius:5px;
+}
+
+.completed{
+text-decoration:line-through;
+color:gray;
+}
+
+.actions button{
+margin:3px;
+padding:5px;
+font-size:12px;
+}
+
+.delete{
+background:red;
+}
+
+.edit{
+background:orange;
+}
+
+.done{
+background:green;
+}
