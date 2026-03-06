@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhargava Store</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="toggle-btn" id="toggle-view">Switch to Admin</button>
+
+<!-- ── CUSTOMER VIEW ─────────────────────────────────────── -->
+<div id="shop-page">
+
+<header>
+  <div class="logo">Bhargava<span>Store</span></div>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+    <div class="cart-icon" id="open-cart">🛒 <span id="cart-count">0</span></div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Simple.Clean.low Prices.</h1>
+  </section>
+
+  <section class="products" id="products"></section>
+
+  <div id="cart-modal">
+    <div class="cart-content">
+      <h2 style="margin-bottom:1.5rem">Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cart-total">₹0</strong>
+      </div>
+      <button class="btn btn-checkout">Proceed to Checkout</button>
+      <button class="btn btn-close" id="close-cart">Continue Shopping</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Bhargava Store online store</p>
+</footer>
+
+</div>
+
+<!-- ── ADMIN VIEW ────────────────────────────────────────── -->
+<div id="admin-page" class="admin-layout">
+
+<div class="admin-sidebar">
+  <div class="admin-logo">Admin Panel</div>
+  <ul>
+    <li class="active">Dashboard</li>
+    <li>Products</li>
+    <li>Orders</li>
+    <li>Customers</li>
+    <li>Settings</li>
+  </ul>
+</div>
+
+<div class="admin-main">
+  <h1>Dashboard</h1>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Revenue</h3>
+      <div class="stat-value">₹1,48,720</div>
+      <div class="stat-change good">+14.2%</div>
+    </div>
+    <div class="stat-card">
+      <h3>Orders</h3>
+      <div class="stat-value">421</div>
+      <div class="stat-change good">+19%</div>
+    </div>
+    <div class="stat-card">
+      <h3>Customers</h3>
+      <div class="stat-value">2,314</div>
+      <div class="stat-change bad">-2%</div>
+    </div>
+    <div class="stat-card">
+      <h3>Products</h3>
+      <div class="stat-value">72</div>
+    </div>
+  </div>
+
+  <h2 style="margin:2rem 0 1rem">Products Overview</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="admin-products"></tbody>
+  </table>
+</div>
+
+</div>
+
+<script src="mar6.js"></script>
+</body>
+</html>
