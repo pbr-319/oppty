@@ -1,68 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Register Login Logout</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <title>Register Login Logout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <h2 id="title">Register</h2>
 
-<div class="container">
+      <!-- REGISTER -->
 
-<h2 id="title">Register</h2>
+      <div id="registerBox">
+        <input id="regUser" placeholder="Username" />
+        <input id="regPass" type="password" placeholder="Password" />
 
-<!-- REGISTER -->
+        <button onclick="register()">Register</button>
 
-<div id="registerBox">
+        <p>
+          Already have account?
+          <a href="#" onclick="showLogin()">Login</a>
+        </p>
 
-<input id="regUser" placeholder="Username">
-<input id="regPass" type="password" placeholder="Password">
+        <p id="regMsg"></p>
+      </div>
 
-<button onclick="register()">Register</button>
+      <!-- LOGIN -->
 
-<p>
-Already have account?
-<a href="#" onclick="showLogin()">Login</a>
-</p>
+      <div id="loginBox" class="hidden">
+        <input id="loginUser" placeholder="Username" />
+        <input id="loginPass" type="password" placeholder="Password" />
 
-<p id="regMsg"></p>
+        <button onclick="login()">Login</button>
 
-</div>
+        <p>
+          No account?
+          <a href="#" onclick="showRegister()">Register</a>
+        </p>
 
+        <p id="loginMsg"></p>
+      </div>
 
-<!-- LOGIN -->
+      <!-- HOME AFTER LOGIN -->
 
-<div id="loginBox" class="hidden">
+      <div id="homeBox" class="hidden">
+        <h3 id="welcome"></h3>
 
-<input id="loginUser" placeholder="Username">
-<input id="loginPass" type="password" placeholder="Password">
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
 
-<button onclick="login()">Login</button>
-
-<p>
-No account?
-<a href="#" onclick="showRegister()">Register</a>
-</p>
-
-<p id="loginMsg"></p>
-
-</div>
-
-
-<!-- HOME AFTER LOGIN -->
-
-<div id="homeBox" class="hidden">
-
-<h3 id="welcome"></h3>
-
-<button onclick="logout()">Logout</button>
-
-</div>
-
-</div>
-
-
-<script src="mar7.js"></script>
-
-</body>
+    <script src="mar7.js"></script>
+  </body>
 </html>
