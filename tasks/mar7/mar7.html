@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Login</title>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 id="title">Register</h2>
+
+<!-- REGISTER -->
+
+<div id="registerBox">
+
+<input id="regUser" placeholder="Username">
+<input id="regPass" type="password" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p>
+Already have account?
+<a href="#" onclick="showLogin()">Login</a>
+</p>
+
+<p id="regMsg"></p>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div id="loginBox" class="hidden">
+
+<input id="loginUser" placeholder="Username">
+<input id="loginPass" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p>
+No account?
+<a href="#" onclick="showRegister()">Register</a>
+</p>
+
+<p id="loginMsg"></p>
+
+</div>
+
+</div>
+<script src="mar7.js"></script>
+
+</body>
+</html>
