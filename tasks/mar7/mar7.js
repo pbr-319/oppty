@@ -2,9 +2,11 @@ function showLogin(){
 
 registerBox.classList.add("hidden")
 loginBox.classList.remove("hidden")
+homeBox.classList.add("hidden")
 title.innerText="Login"
 
 }
+
 
 /* SHOW REGISTER */
 
@@ -12,6 +14,7 @@ function showRegister(){
 
 loginBox.classList.add("hidden")
 registerBox.classList.remove("hidden")
+homeBox.classList.add("hidden")
 title.innerText="Register"
 
 }
@@ -50,12 +53,31 @@ let storedUser=JSON.parse(localStorage.getItem("user"))
 
 if(user===storedUser.username && pass===storedUser.password){
 
-loginMsg.innerText="Login Successful"
+localStorage.setItem("loggedUser",user)
+
+loginBox.classList.add("hidden")
+homeBox.classList.remove("hidden")
+
+welcome.innerText="Welcome "+user
 
 }else{
 
 loginMsg.innerText="Invalid Username or Password"
 
 }
+
+}
+
+
+/* LOGOUT */
+
+function logout(){
+
+localStorage.removeItem("loggedUser")
+
+homeBox.classList.add("hidden")
+loginBox.classList.remove("hidden")
+
+title.innerText="Login"
 
 }
